@@ -61,15 +61,14 @@ nav {
     z-index: 2;
 }
 
-/* FOREGROUND IMAGE */
-
-/* LOGO */
+/* the logo */
 .logo {
     font-size: 15vw;
-    font-weight: 700;
+    font-weight: 1000;
     color: aliceblue;
     text-align: center;
     line-height: 0.9;
+    letter-spacing: 0.1em;
 }
 
 .logo:hover {
