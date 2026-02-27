@@ -12,17 +12,43 @@
 <body>
     <div id="sketch-container"></div>
 
+
+
+
     <script>
+        let font; 
+
+    function preload() {
+            font = loadFont("Gravitas.ttf");
+        }
+    
+
         function setup() {
             let canvas = createCanvas(400, 400);
             canvas.parent('sketch-container');
-            background(220);
+            background(151, 220, 232);
+            textFont(font);
+            textSize(200);
         }
 
         function draw() {
-            fill(255);
+            fill(0);
+            noStroke();
             ellipse(mouseX, mouseY, 40, 40);
         }
+
+        function draw(){
+            //text('Yo', width/2-170, height/2+50);
+            
+            let yoArray = font.textToPoints('Yo', width/2-170, height/2+50, 200, {
+                sampleFactor: 0.1
+            });
+
+            for (let i = 0; i < yoArray.length; i++){
+                ellipse(yoArray[i].x, yoArray[i].y, 10, 10);
+            }
+        }
+         
     </script>
 </body>
 
